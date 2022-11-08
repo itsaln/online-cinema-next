@@ -7,7 +7,7 @@ import logoImage from '@/assets/images/logo.svg'
 import { ISeo } from '@/utils/meta/meta.interface'
 import { onlyText } from '@/utils/string/clearText'
 
-import { siteName, titleMerge } from '@/config/seo.config'
+import { siteName, titleMerge } from '@/configs/seo.config'
 
 const Meta: FC<PropsWithChildren<ISeo>> = ({
 	title,

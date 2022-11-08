@@ -25,7 +25,7 @@
       "@/services/*": ["services/*"],
       "@/utils/*": ["utils/*"],
       "@/assets/*": ["assets/*"],
-      "@/config/*": ["config/*"],
+      "@/configs/*": ["configs/*"],
       "@/store/*": ["store/*"],
       "@/providers/*": ["providers/*"]
     }
