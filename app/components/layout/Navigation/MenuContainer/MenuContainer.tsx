@@ -1,21 +1,16 @@
 import { FC } from 'react'
 
-import MenuItem from '@/components/layout/Navigation/MenuContainer/MenuItem'
-import AuthItems from '@/components/layout/Navigation/MenuContainer/auth/AuthItems'
-import { IMenu } from '@/components/layout/Navigation/MenuContainer/menu.interface'
+import Menu from '@/components/layout/Navigation/MenuContainer/Menu'
+import { firstMenu, userMenu } from '@/components/layout/Navigation/MenuContainer/menu.data'
 
 import styles from './Menu.module.scss'
 
-const MenuContainer: FC<{ menu: IMenu }> = ({ menu: { items, title } }) => {
+const MenuContainer: FC = () => {
 	return (
-		<div className={styles.menu}>
-			<div className={styles.heading}>{title}</div>
-			<ul className={styles.ul}>
-				{items.map((item) => (
-					<MenuItem item={item} key={item.link} />
-				))}
-				{title === 'General' ? <AuthItems /> : null}
-			</ul>
+		<div>
+			<Menu menu={firstMenu} />
+			{/*Genres menu*/}
+			<Menu menu={userMenu} />
 		</div>
 	)
 }

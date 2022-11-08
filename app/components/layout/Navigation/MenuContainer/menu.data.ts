@@ -1,6 +1,6 @@
 import { IMenu } from '@/components/layout/Navigation/MenuContainer/menu.interface'
 
-const firstMenu: IMenu = {
+export const firstMenu: IMenu = {
 	title: 'Menu',
 	items: [
 		{
