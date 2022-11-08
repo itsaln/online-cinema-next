@@ -1,7 +1,11 @@
 import { FC } from 'react'
 
 import Menu from '@/components/layout/Navigation/MenuContainer/Menu'
-import { firstMenu, userMenu } from '@/components/layout/Navigation/MenuContainer/menu.data'
+import GenreMenu from '@/components/layout/Navigation/MenuContainer/genres/GenreMenu'
+import {
+	firstMenu,
+	userMenu
+} from '@/components/layout/Navigation/MenuContainer/menu.data'
 
 import styles from './Menu.module.scss'
 
@@ -9,7 +13,7 @@ const MenuContainer: FC = () => {
 	return (
 		<div>
 			<Menu menu={firstMenu} />
-			{/*Genres menu*/}
+			<GenreMenu />
 			<Menu menu={userMenu} />
 		</div>
 	)
