@@ -5,6 +5,7 @@ import { IHome } from '@/screens/home/home.interface'
 import Heading from '@/ui/heading/Heading'
 
 import Meta from '@/utils/meta/Meta'
+import { toastr } from 'react-redux-toastr'
 
 const Home: FC<IHome> = () => {
 	return (
@@ -16,6 +17,10 @@ const Home: FC<IHome> = () => {
 				title='Watch movies online'
 				className='text-gray-300 mb-8 text-xl'
 			/>
+
+			<button onClick={() => toastr.success('Auth', 'You have successfully!')}>
+				Show message
+			</button>
 		</Meta>
 	)
 }
