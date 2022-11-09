@@ -19,14 +19,14 @@ const queryClient = new QueryClient({
 
 const MainProvider: FC<PropsWithChildren> = ({ children }) => {
 	return (
-		<HeadProvider>
+		// <HeadProvider>
 			<Provider store={store}>
 				<QueryClientProvider client={queryClient}>
 					<ReduxToast />
 					<Layout>{children}</Layout>
 				</QueryClientProvider>
 			</Provider>
-		</HeadProvider>
+		// </HeadProvider>
 	)
 }
 

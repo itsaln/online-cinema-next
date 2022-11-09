@@ -1,5 +1,5 @@
 import { Head } from 'next/document'
-import NextProgressBar from 'nextjs-progressbar'
+import NextNProgress from 'nextjs-progressbar'
 import { FC, PropsWithChildren } from 'react'
 
 import { accentColor } from '@/configs/constants'
@@ -9,7 +9,7 @@ import Favicons from '@/providers/HeadProvider/Favicons'
 const HeadProvider: FC<PropsWithChildren> = ({ children }) => {
 	return (
 		<>
-			<NextProgressBar
+			<NextNProgress
 				color={accentColor}
 				startPosition={0.3}
 				stopDelayMs={200}
@@ -26,8 +26,10 @@ const HeadProvider: FC<PropsWithChildren> = ({ children }) => {
 
 				<meta name='theme-color' content={'#181b1e'} />
 				<meta name='msapplication-navbutton-color' content={'#181b1e'} />
-				<meta name='app-mobile-web-app-status-bar-style' content={'#181b1e'} />
-				<title>asfasfad</title>
+				<meta
+					name='apple-mobile-web-app-status-bar-style'
+					content={'#181b1e'}
+				/>
 			</Head>
 			{children}
 		</>
