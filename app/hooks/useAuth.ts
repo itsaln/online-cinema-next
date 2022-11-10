@@ -1,3 +1,4 @@
 export const useAuth = () => ({
-	user: null
+	user: null,
+	isLoading: false
 })
