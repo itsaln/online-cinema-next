@@ -1,4 +1,4 @@
-import { Head } from 'next/document'
+import Head from 'next/head'
 import NextNProgress from 'nextjs-progressbar'
 import { FC, PropsWithChildren } from 'react'
 
