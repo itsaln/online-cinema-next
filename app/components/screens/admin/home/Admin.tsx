@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import Statistics from '@/screens/admin/Statistics/Statistics'
+import Statistics from '@/screens/admin/home/Statistics/Statistics'
 
 import AdminNavigation from '@/ui/admin-navigation/AdminNavigation'
 import Heading from '@/ui/heading/Heading'

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { FC } from 'react'
 import { useQuery } from 'react-query'
 
-import styles from '@/screens/admin/Admin.module.scss'
+import styles from '@/screens/admin/home/Admin.module.scss'
 
 import SkeletonLoader from '@/ui/SkeletonLoader'
 import SubHeading from '@/ui/heading/SubHeading'
