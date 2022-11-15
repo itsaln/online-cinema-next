@@ -7,7 +7,7 @@ import axios from '../api/interceptors'
 export const UserService = {
 	async getAll(searchTerm?: string) {
 		return axios.get<IUser[]>(getUsersUrl(''), {
-			params: searchTerm ? { search: searchTerm } : {}
+			params: searchTerm ? { searchTerm: searchTerm } : {}
 		})
 	},
 
