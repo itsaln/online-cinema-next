@@ -21,7 +21,7 @@ const AdminTable: FC<IAdminTable> = ({
 	tableItems
 }) => {
 	const confirmDelete = (id: string) => {
-		if (confirm('Вы точно хотите удалить пользователя?')) removeHandler(id)
+		if (confirm('Вы точно хотите удалить?')) removeHandler(id)
 	}
 
 	return (

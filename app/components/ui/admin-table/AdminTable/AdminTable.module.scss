@@ -1,11 +1,14 @@
 
 .item {
-  @apply flex items-center justify-between bg-gray-700 bg-opacity-20 mt-4 px-5 rounded-lg transition-colors hover:bg-opacity-50;
+  @apply flex items-center justify-between bg-gray-700 bg-opacity-20 mt-4 rounded-lg transition-colors hover:bg-opacity-50;
 
   > div {
-    @apply text-white text-opacity-80 py-3;
+    @apply truncate text-white text-opacity-80 py-3 px-4;
     width: 24%;
 
+    &:first-child {
+      width: 35%;
+    }
     &:last-child {
       @apply text-right justify-end;
     }
