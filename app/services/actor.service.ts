@@ -1,3 +1,5 @@
+import { IActorEditInput } from '@/screens/admin/actor/actor-edit.interface'
+
 import { IActor } from '@/shared/types/movie.types'
 
 import { getActorsUrl } from '@/configs/api.config'
@@ -15,8 +17,16 @@ export const ActorService = {
 		})
 	},
 
+	async getOne(_id: string) {
+		return axios.get<IActorEditInput>(getActorsUrl(`/${_id}`))
+	},
+
 	async create() {
 		return axios.post<string>(getActorsUrl(''))
+	},
+
+	async update(_id: string, data: IActorEditInput) {
+		return axios.put<string>(getActorsUrl(`/${_id}`), data)
 	},
 
 	async delete(_id: string) {

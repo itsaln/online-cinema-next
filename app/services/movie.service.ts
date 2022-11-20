@@ -1,3 +1,5 @@
+import { IMovieEditInput } from '@/screens/admin/movie/movie-edit.interface'
+
 import { IMovie } from '@/shared/types/movie.types'
 
 import { getMoviesUrl } from '@/configs/api.config'
@@ -15,8 +17,16 @@ export const MovieService = {
 		})
 	},
 
+	async getOne(_id: string) {
+		return axios.get<IMovieEditInput>(getMoviesUrl(`/${_id}`))
+	},
+
 	async create() {
 		return axios.post<string>(getMoviesUrl(''))
+	},
+
+	async update(_id: string, data: IMovieEditInput) {
+		return axios.put<string>(getMoviesUrl(`/${_id}`), data)
 	},
 
 	async delete(_id: string) {
