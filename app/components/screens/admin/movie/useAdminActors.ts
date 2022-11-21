@@ -2,12 +2,12 @@ import { useQuery } from 'react-query'
 
 import { IOption } from '@/ui/select/select.interface'
 
-import { GenreService } from '@/services/genre.service'
+import { ActorService } from '@/services/actor.service'
 
 import { toastError } from '@/utils/toast-error'
 
-export const useAdminGenres = () => {
-	const queryData = useQuery('List of genre', () => GenreService.getAll(), {
+export const useAdminActors = () => {
+	const queryData = useQuery('List of actor', () => ActorService.getAll(), {
 		select: ({ data }) =>
 			data.map(
 				(genre): IOption => ({
@@ -16,7 +16,7 @@ export const useAdminGenres = () => {
 				})
 			),
 		onError: (error) => {
-			toastError(error, 'Genre list')
+			toastError(error, 'Actor list')
 		}
 	})
 

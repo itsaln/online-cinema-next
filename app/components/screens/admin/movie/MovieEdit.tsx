@@ -1,7 +1,10 @@
+import dynamic from 'next/dynamic'
 import { FC } from 'react'
 import { Controller, useForm } from 'react-hook-form'
 
 import { IMovieEditInput } from '@/screens/admin/movie/movie-edit.interface'
+import { useAdminActors } from '@/screens/admin/movie/useAdminActors'
+import { useAdminGenres } from '@/screens/admin/movie/useAdminGenres'
 import { useMovieEdit } from '@/screens/admin/movie/useMovieEdit'
 
 import SkeletonLoader from '@/ui/SkeletonLoader'
@@ -16,6 +19,10 @@ import Heading from '@/ui/heading/Heading'
 import Meta from '@/utils/meta/Meta'
 import { generateSlug } from '@/utils/string/generateSlug'
 
+const DynamicSelect = dynamic(() => import('@/ui/select/Select'), {
+	ssr: false
+})
+
 const MovieEdit: FC = () => {
 	const {
 		handleSubmit,
@@ -29,6 +36,8 @@ const MovieEdit: FC = () => {
 	})
 
 	const { isLoading, onSubmit } = useMovieEdit(setValue)
+	const { isLoading: isGenresLoading, data: genres } = useAdminGenres()
+	const { isLoading: isActorsLoading, data: actors } = useAdminActors()
 
 	return (
 		<Meta title='Edit movie'>
@@ -84,6 +93,42 @@ const MovieEdit: FC = () => {
 							/>
 
 							{/* React Select */}
+
+							<Controller
+								control={control}
+								name='genres'
+								render={({ field, fieldState: { error } }) => (
+									<DynamicSelect
+										field={field}
+										options={genres || []}
+										isLoading={isGenresLoading}
+										isMulti
+										placeholder='Genres'
+										error={error}
+									/>
+								)}
+								rules={{
+									required: 'Please select at least one genre!'
+								}}
+							/>
+
+							<Controller
+								control={control}
+								name='actors'
+								render={({ field, fieldState: { error } }) => (
+									<DynamicSelect
+										field={field}
+										options={actors || []}
+										isLoading={isActorsLoading}
+										isMulti
+										placeholder='Actors'
+										error={error}
+									/>
+								)}
+								rules={{
+									required: 'Please select at least one actor!'
+								}}
+							/>
 
 							<Controller
 								control={control}
