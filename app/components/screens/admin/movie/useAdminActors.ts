@@ -10,9 +10,9 @@ export const useAdminActors = () => {
 	const queryData = useQuery('List of actor', () => ActorService.getAll(), {
 		select: ({ data }) =>
 			data.map(
-				(genre): IOption => ({
-					label: genre.name,
-					value: genre._id
+				(actor): IOption => ({
+					label: actor.name,
+					value: actor._id
 				})
 			),
 		onError: (error) => {
