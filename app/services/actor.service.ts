@@ -1,8 +1,8 @@
 import { IActorEditInput } from '@/screens/admin/actor/actor-edit.interface'
 
-import { IActor } from '@/shared/types/movie.types'
+import { IActor, IGenre } from '@/shared/types/movie.types'
 
-import { getActorsUrl } from '@/configs/api.config'
+import { getActorsUrl, getGenresUrl } from '@/configs/api.config'
 
 import axios, { axiosClassic } from '../api/interceptors'
 
@@ -19,6 +19,10 @@ export const ActorService = {
 
 	async getOne(_id: string) {
 		return axios.get<IActorEditInput>(getActorsUrl(`/${_id}`))
+	},
+
+	async getOneBySlug(slug: string) {
+		return axiosClassic.get<IActor>(getActorsUrl(`/by-slug/${slug}`))
 	},
 
 	async create() {
