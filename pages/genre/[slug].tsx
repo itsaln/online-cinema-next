@@ -45,10 +45,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
 	try {
-		const { data: genre } = await GenreService.getOneBySlug(
-			String(params?.slug)
-		)
-
+		const { data: genre } = await GenreService.getBySlug(String(params?.slug))
 		const { data: movies } = await MovieService.getByGenres([genre._id])
 
 		return {

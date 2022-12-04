@@ -11,8 +11,7 @@ import { MovieService } from '@/services/movie.service'
 
 import { getGenreList } from '@/utils/movie/getGenreList'
 
-import { getActorsUrl } from '@/configs/api.config'
-import { getMovieUrl } from '@/configs/url.config'
+import { getActorUrl, getMovieUrl } from '@/configs/url.config'
 
 const HomePage: NextPage<IHome> = ({ slides, actors, trendingMovies }) => {
 	return (
@@ -37,7 +36,7 @@ export const getStaticProps: GetStaticProps = async () => {
 		const actors: IGalleryItem[] = dataActors.slice(0, 7).map((actor) => ({
 			name: actor.name,
 			posterPath: actor.photo,
-			link: getActorsUrl(actor.slug),
+			link: getActorUrl(actor.slug),
 			content: {
 				title: actor.name,
 				subTitle: `+${actor.countMovies} movies`
