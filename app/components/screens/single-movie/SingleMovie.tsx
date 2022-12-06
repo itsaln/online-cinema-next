@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic'
 import { FC } from 'react'
 
 import Content from '@/screens/single-movie/Content/Content'
@@ -11,6 +12,10 @@ import { IMovie } from '@/shared/types/movie.types'
 
 import Meta from '@/utils/meta/Meta'
 
+const DynamicPlayer = dynamic(() => import('@/ui/video-player/VideoPlayer'), {
+	ssr: false
+})
+
 const SingleMovie: FC<{ movie: IMovie; similarMovies: IGalleryItem[] }> = ({
 	movie,
 	similarMovies
@@ -22,7 +27,7 @@ const SingleMovie: FC<{ movie: IMovie; similarMovies: IGalleryItem[] }> = ({
 				Detail={() => <Content movie={movie} />}
 			/>
 
-			{/* Video player	*/}
+			<DynamicPlayer videoSource={movie.videoUrl} slug={movie.slug} />
 
 			<div className='mt-12'>
 				<SubHeading title='Similar' />
