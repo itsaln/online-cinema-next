@@ -12,12 +12,10 @@ import { getMovieUrl } from '@/configs/url.config'
 
 import Error404 from '../404'
 
-export interface IMoviePage {
+const MoviePage: NextPage<{
 	movie: IMovie | undefined
 	similarMovies: IGalleryItem[]
-}
-
-const MoviePage: NextPage<IMoviePage> = ({ similarMovies, movie }) => {
+}> = ({ movie, similarMovies }) => {
 	return movie ? (
 		<SingleMovie similarMovies={similarMovies || []} movie={movie} />
 	) : (

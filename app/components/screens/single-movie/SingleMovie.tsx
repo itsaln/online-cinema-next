@@ -1,12 +1,37 @@
 import { FC } from 'react'
 
-import { IMoviePage } from '../../../../pages/movie/[slug]'
+import Content from '@/screens/single-movie/Content/Content'
+
+import Banner from '@/ui/banner/Banner'
+import Gallery from '@/ui/gallery/Gallery'
+import { IGalleryItem } from '@/ui/gallery/gallery.interface'
+import SubHeading from '@/ui/heading/SubHeading'
+
+import { IMovie } from '@/shared/types/movie.types'
+
 import Meta from '@/utils/meta/Meta'
 
-const SingleMovie: FC<IMoviePage> = ({ movie, similarMovies }) => {
-	return <Meta title={movie.title} description={`Watch ${movie.title}`}>
+const SingleMovie: FC<{ movie: IMovie; similarMovies: IGalleryItem[] }> = ({
+	movie,
+	similarMovies
+}) => {
+	return (
+		<Meta title={movie.title} description={`Watch ${movie.title}`}>
+			<Banner
+				image={movie.bigPoster}
+				Detail={() => <Content movie={movie} />}
+			/>
 
-	</Meta>
+			{/* Video player	*/}
+
+			<div className='mt-12'>
+				<SubHeading title='Similar' />
+				<Gallery items={similarMovies} />
+			</div>
+
+			{/* Rating	*/}
+		</Meta>
+	)
 }
 
 export default SingleMovie
