@@ -1,6 +1,7 @@
 import { FC } from 'react'
 
 import ContentList from '@/screens/single-movie/Content/ContentList/ContentList'
+import FavoriteButton from '@/screens/single-movie/FavoriteButton/FavoriteButton'
 
 import MaterialIcon from '@/ui/MaterialIcon'
 
@@ -41,7 +42,7 @@ const Content: FC<{ movie: IMovie }> = ({ movie }) => {
 				<span>{movie.rating.toFixed(1)}</span>
 			</div>
 
-			{/*	Favorite button */}
+			<FavoriteButton movieId={movie._id} />
 		</div>
 	)
 }

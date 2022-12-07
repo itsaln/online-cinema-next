@@ -1,13 +1,20 @@
 import { FC } from 'react'
 
-import FavoriteMovies from '@/components/layout/Sidebar/MoviesContainer/FavoriteMovies/FavoriteMovies'
 import PopularMovies from '@/components/layout/Sidebar/MoviesContainer/PopularMovies'
+import dynamic from 'next/dynamic'
+
+const DynamicFavoriteMovies = dynamic(
+	() => import('@/components/layout/Sidebar/MoviesContainer/FavoriteMovies/FavoriteMovies'),
+	{
+		ssr: false
+	}
+)
 
 const MoviesContainer: FC = () => {
 	return (
 		<div>
 			<PopularMovies />
-			<FavoriteMovies />
+			<DynamicFavoriteMovies />
 		</div>
 	)
 }
