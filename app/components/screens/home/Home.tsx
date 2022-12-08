@@ -20,16 +20,16 @@ const Home: FC<IHome> = ({ slides, actors, trendingMovies }) => {
 				className='text-gray-300 mb-8 text-xl'
 			/>
 
-			{slides.length && <Slider slides={slides} />}
+			{slides.length ? <Slider slides={slides} /> : <div className='text-danger'>Movies not found</div>}
 
 			<div className='mt-10'>
 				<SubHeading title='Trending now' />
-				{trendingMovies.length && <Gallery items={trendingMovies} />}
+				{trendingMovies.length ? <Gallery items={trendingMovies} /> : <div className='text-danger'>Movies not found</div>}
 			</div>
 
 			<div className='mt-10'>
 				<SubHeading title='Best actors' />
-				{actors.length && <Gallery items={actors} />}
+				{actors.length ? <Gallery items={actors} /> : <div className='text-danger'>Actors not found</div>}
 			</div>
 		</Meta>
 	)

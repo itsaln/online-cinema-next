@@ -25,7 +25,8 @@ module.exports = {
 			transparent: colors.transparent,
 			yellow: {
 				700: '#F5C521'
-			}
+			},
+			danger: '#dc2626'
 		},
 
 		extend: {

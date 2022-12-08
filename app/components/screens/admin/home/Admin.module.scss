@@ -7,7 +7,7 @@
   }
 
   .countUsers {
-    @apply mr-28 flex items-center justify-center text-center;
+    @apply mr-28 flex items-center justify-center text-center p-5;
 
     .number {
       @apply text-7xl mb-1 font-medium;

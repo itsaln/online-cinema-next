@@ -1,7 +1,7 @@
 @import '../../../assets/styles/variables';
 
 .slider {
-  @apply relative mx-auto;
+  @apply relative mx-auto mt-6;
   max-width: 1200px;
 
   .slide {
