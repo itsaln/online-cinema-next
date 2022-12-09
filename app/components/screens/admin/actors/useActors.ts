@@ -10,7 +10,7 @@ import { ActorService } from '@/services/actor.service'
 
 import { toastError } from '@/utils/toast-error'
 
-import { getAdminUrl } from '@/configs/url.config'
+import { getAdminUrl } from '@/config/url.config'
 import { useRouter } from 'next/router'
 import { GenreService } from '@/services/genre.service'
 

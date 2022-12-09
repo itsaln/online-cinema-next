@@ -3,7 +3,7 @@ import Cookies from 'js-cookie'
 
 import { removeTokensStorage, saveToStorage } from '@/services/auth/auth.helper'
 
-import { getAUthUrl } from '@/configs/api.config'
+import { getAUthUrl } from '@/config/api.config'
 
 import { getContentType } from '../../api/api.helpers'
 

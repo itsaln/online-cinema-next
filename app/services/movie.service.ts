@@ -2,7 +2,7 @@ import { IMovieEditInput } from '@/screens/admin/movie/movie-edit.interface'
 
 import { IMovie } from '@/shared/types/movie.types'
 
-import { getMoviesUrl } from '@/configs/api.config'
+import { getMoviesUrl } from '@/config/api.config'
 
 import axios, { axiosClassic } from '../api/interceptors'
 

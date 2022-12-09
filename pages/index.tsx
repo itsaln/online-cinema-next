@@ -11,7 +11,7 @@ import { MovieService } from '@/services/movie.service'
 
 import { getGenreList } from '@/utils/movie/getGenreList'
 
-import { getActorUrl, getMovieUrl } from '@/configs/url.config'
+import { getActorUrl, getMovieUrl } from '../app/config/url.config'
 
 const HomePage: NextPage<IHome> = ({ slides, actors, trendingMovies }) => {
 	return (

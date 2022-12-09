@@ -9,7 +9,7 @@ import { UserService } from '@/services/user.service'
 
 import { toastError } from '@/utils/toast-error'
 
-import { getAdminUrl } from '@/configs/url.config'
+import { getAdminUrl } from '@/config/url.config'
 
 export const useUserEdit = (setValue: UseFormSetValue<IUserEditInput>) => {
 	const { push, query } = useRouter()

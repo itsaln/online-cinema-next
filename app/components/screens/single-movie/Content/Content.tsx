@@ -9,7 +9,7 @@ import { useAuth } from '@/hooks/useAuth'
 
 import { IMovie } from '@/shared/types/movie.types'
 
-import { getActorUrl, getGenreUrl } from '@/configs/url.config'
+import { getActorUrl, getGenreUrl } from '@/config/url.config'
 
 import styles from './Content.module.scss'
 

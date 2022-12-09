@@ -3,7 +3,7 @@ import { IProfileInput } from '@/screens/profile/profile.interface'
 import { IMovie } from '@/shared/types/movie.types'
 import { IUser } from '@/shared/types/user.types'
 
-import { getUsersUrl } from '@/configs/api.config'
+import { getUsersUrl } from '@/config/api.config'
 
 import axios from '../api/interceptors'
 

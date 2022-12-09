@@ -7,7 +7,7 @@ import Heading from '@/ui/heading/Heading'
 
 import Meta from '@/utils/meta/Meta'
 
-import { getMovieUrl } from '@/configs/url.config'
+import { getMovieUrl } from '@/config/url.config'
 
 import styles from './Catalog.module.scss'
 

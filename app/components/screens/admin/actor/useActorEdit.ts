@@ -10,7 +10,7 @@ import { ActorService } from '@/services/actor.service'
 import { getKeys } from '@/utils/object/getKeys'
 import { toastError } from '@/utils/toast-error'
 
-import { getAdminUrl } from '@/configs/url.config'
+import { getAdminUrl } from '@/config/url.config'
 
 export const useActorEdit = (setValue: UseFormSetValue<IActorEditInput>) => {
 	const { push, query } = useRouter()

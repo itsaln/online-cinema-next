@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { FC } from 'react'
 
-import { getMovieUrl } from '@/configs/url.config'
+import { getMovieUrl } from '@/config/url.config'
 
 import styles from './AuthPlaceholder.module.scss'
 

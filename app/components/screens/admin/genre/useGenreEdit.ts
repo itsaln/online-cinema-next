@@ -10,7 +10,7 @@ import { GenreService } from '@/services/genre.service'
 import { getKeys } from '@/utils/object/getKeys'
 import { toastError } from '@/utils/toast-error'
 
-import { getAdminUrl } from '@/configs/url.config'
+import { getAdminUrl } from '@/config/url.config'
 
 export const useGenreEdit = (setValue: UseFormSetValue<IGenreEditInput>) => {
 	const { push, query } = useRouter()

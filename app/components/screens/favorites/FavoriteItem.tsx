@@ -8,7 +8,7 @@ import { useAuth } from '@/hooks/useAuth'
 
 import { IMovie } from '@/shared/types/movie.types'
 
-import { getMovieUrl } from '@/configs/url.config'
+import { getMovieUrl } from '@/config/url.config'
 
 import styles from './Favorites.module.scss'
 

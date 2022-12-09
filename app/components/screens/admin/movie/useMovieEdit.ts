@@ -10,7 +10,7 @@ import { MovieService } from '@/services/movie.service'
 import { getKeys } from '@/utils/object/getKeys'
 import { toastError } from '@/utils/toast-error'
 
-import { getAdminUrl } from '@/configs/url.config'
+import { getAdminUrl } from '@/config/url.config'
 
 export const useMovieEdit = (setValue: UseFormSetValue<IMovieEditInput>) => {
 	const { push, query } = useRouter()

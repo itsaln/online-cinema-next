@@ -1,4 +1,4 @@
-import { getRatingsUrl } from '@/configs/api.config'
+import { getRatingsUrl } from '@/config/api.config'
 
 import axios from '../api/interceptors'
 

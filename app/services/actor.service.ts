@@ -2,7 +2,7 @@ import { IActorEditInput } from '@/screens/admin/actor/actor-edit.interface'
 
 import { IActor, IGenre } from '@/shared/types/movie.types'
 
-import { getActorsUrl, getGenresUrl } from '@/configs/api.config'
+import { getActorsUrl, getGenresUrl } from '@/config/api.config'
 
 import axios, { axiosClassic } from '../api/interceptors'
 

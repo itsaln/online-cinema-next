@@ -11,7 +11,7 @@ import { UserService } from '@/services/user.service'
 import { convertMongoDate } from '@/utils/date/convertMongoDate'
 import { toastError } from '@/utils/toast-error'
 
-import { getAdminUrl } from '@/configs/url.config'
+import { getAdminUrl } from '@/config/url.config'
 
 export const useUsers = () => {
 	const [searchTerm, setSearchTerm] = useState('')

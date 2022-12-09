@@ -8,7 +8,7 @@ import { IMovie } from '@/shared/types/movie.types'
 
 import { MovieService } from '@/services/movie.service'
 
-import { getMovieUrl } from '@/configs/url.config'
+import { getMovieUrl } from '../../app/config/url.config'
 
 import Error404 from '../404'
 

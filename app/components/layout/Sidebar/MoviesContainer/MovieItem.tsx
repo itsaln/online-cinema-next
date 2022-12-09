@@ -8,7 +8,7 @@ import { IMovie } from '@/shared/types/movie.types'
 
 import { getGenreListEach } from '@/utils/movie/getGenreList'
 
-import { getMovieUrl } from '@/configs/url.config'
+import { getMovieUrl } from '@/config/url.config'
 
 import styles from './MovieList.module.scss'
 

@@ -12,7 +12,7 @@ import { MovieService } from '@/services/movie.service'
 import { getGenreList } from '@/utils/movie/getGenreList'
 import { toastError } from '@/utils/toast-error'
 
-import { getAdminUrl } from '@/configs/url.config'
+import { getAdminUrl } from '@/config/url.config'
 
 export const useMovies = () => {
 	const [searchTerm, setSearchTerm] = useState('')

@@ -11,7 +11,7 @@ import { GenreService } from '@/services/genre.service'
 
 import { toastError } from '@/utils/toast-error'
 
-import { getAdminUrl } from '@/configs/url.config'
+import { getAdminUrl } from '@/config/url.config'
 
 export const useGenres = () => {
 	const [searchTerm, setSearchTerm] = useState('')

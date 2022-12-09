@@ -3,7 +3,7 @@ import { ICollection } from '@/screens/collections/collections.interface'
 
 import { IGenre } from '@/shared/types/movie.types'
 
-import { getGenresUrl } from '@/configs/api.config'
+import { getGenresUrl } from '@/config/api.config'
 
 import axios, { axiosClassic } from '../api/interceptors'
 

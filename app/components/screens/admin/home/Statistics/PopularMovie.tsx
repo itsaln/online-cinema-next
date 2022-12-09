@@ -13,7 +13,7 @@ import { IMovie } from '@/shared/types/movie.types'
 
 import { MovieService } from '@/services/movie.service'
 
-import { getMovieUrl } from '@/configs/url.config'
+import { getMovieUrl } from '@/config/url.config'
 
 const PopularMovie: FC = () => {
 	const { isLoading, data: movie } = useQuery(

@@ -5,7 +5,7 @@ import LogoutButton from '@/components/layout/Navigation/MenuContainer/auth/Logo
 
 import { useAuth } from '@/hooks/useAuth'
 
-import { getAdminHomeUrl } from '@/configs/url.config'
+import { getAdminHomeUrl } from '@/config/url.config'
 
 const AuthItems: FC = () => {
 	const { user } = useAuth()

@@ -5,7 +5,7 @@ import { FC } from 'react'
 import CollectionImage from '@/screens/collections/CollectionImage'
 import { ICollection } from '@/screens/collections/collections.interface'
 
-import { getGenreUrl } from '@/configs/url.config'
+import { getGenreUrl } from '@/config/url.config'
 
 import styles from './Collections.module.scss'
 
