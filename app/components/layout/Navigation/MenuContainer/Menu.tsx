@@ -1,14 +1,17 @@
+import dynamic from 'next/dynamic'
 import { FC } from 'react'
 
 import MenuItem from '@/components/layout/Navigation/MenuContainer/MenuItem'
 import { IMenu } from '@/components/layout/Navigation/MenuContainer/menu.interface'
 
 import styles from './Menu.module.scss'
-import dynamic from 'next/dynamic'
 
-const DynamicAuthItems = dynamic(() => import('@/components/layout/Navigation/MenuContainer/auth/AuthItems'), {
-	ssr: false
-})
+const DynamicAuthItems = dynamic(
+	() => import('@/components/layout/Navigation/MenuContainer/auth/AuthItems'),
+	{
+		ssr: false
+	}
+)
 
 const Menu: FC<{ menu: IMenu }> = ({ menu: { items, title } }) => {
 	return (
