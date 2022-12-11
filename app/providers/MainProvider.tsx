@@ -25,17 +25,16 @@ const MainProvider: FC<PropsWithChildren<TypeComponentAuthFields>> = ({
 	Component
 }) => {
 	return (
-		// TODO: need to resolve this
-		// <HeadProvider>
-		<Provider store={store}>
-			<QueryClientProvider client={queryClient}>
-				<ReduxToast />
-				<AuthProvider Component={Component}>
-					<Layout>{children}</Layout>
-				</AuthProvider>
-			</QueryClientProvider>
-		</Provider>
-		// </HeadProvider>
+		<HeadProvider>
+			<Provider store={store}>
+				<QueryClientProvider client={queryClient}>
+					<ReduxToast />
+					<AuthProvider Component={Component}>
+						<Layout>{children}</Layout>
+					</AuthProvider>
+				</QueryClientProvider>
+			</Provider>
+		</HeadProvider>
 	)
 }
 
