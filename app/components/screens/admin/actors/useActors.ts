@@ -1,18 +1,17 @@
+import { useRouter } from 'next/router'
 import { ChangeEvent, useMemo, useState } from 'react'
 import { useMutation, useQuery } from 'react-query'
 import { toastr } from 'react-redux-toastr'
 
 import { ITableItem } from '@/ui/admin-table/AdminTable/admin-table.interface'
 
+import { getAdminUrl } from '@/config/url.config'
+
 import { useDebounce } from '@/hooks/useDebounce'
 
 import { ActorService } from '@/services/actor.service'
 
 import { toastError } from '@/utils/toast-error'
-
-import { getAdminUrl } from '@/config/url.config'
-import { useRouter } from 'next/router'
-import { GenreService } from '@/services/genre.service'
 
 export const useActors = () => {
 	const [searchTerm, setSearchTerm] = useState('')
@@ -65,7 +64,7 @@ export const useActors = () => {
 			},
 			onSuccess: () => {
 				toastr.success('Delete actor', 'delete was successful')
-				queryData.refetch()
+				let ignore = queryData.refetch()
 			}
 		}
 	)

@@ -5,12 +5,12 @@ import { toastr } from 'react-redux-toastr'
 
 import { IActorEditInput } from '@/screens/admin/actor/actor-edit.interface'
 
+import { getAdminUrl } from '@/config/url.config'
+
 import { ActorService } from '@/services/actor.service'
 
 import { getKeys } from '@/utils/object/getKeys'
 import { toastError } from '@/utils/toast-error'
-
-import { getAdminUrl } from '@/config/url.config'
 
 export const useActorEdit = (setValue: UseFormSetValue<IActorEditInput>) => {
 	const { push, query } = useRouter()
@@ -38,7 +38,7 @@ export const useActorEdit = (setValue: UseFormSetValue<IActorEditInput>) => {
 		{
 			onSuccess: () => {
 				toastr.success('Update actor', 'update was successful')
-				push(getAdminUrl('actors'))
+				let ignore = push(getAdminUrl('actors'))
 			},
 			onError: (error) => {
 				toastError(error, 'Update actor')

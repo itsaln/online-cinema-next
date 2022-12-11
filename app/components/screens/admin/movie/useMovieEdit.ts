@@ -5,12 +5,12 @@ import { toastr } from 'react-redux-toastr'
 
 import { IMovieEditInput } from '@/screens/admin/movie/movie-edit.interface'
 
+import { getAdminUrl } from '@/config/url.config'
+
 import { MovieService } from '@/services/movie.service'
 
 import { getKeys } from '@/utils/object/getKeys'
 import { toastError } from '@/utils/toast-error'
-
-import { getAdminUrl } from '@/config/url.config'
 
 export const useMovieEdit = (setValue: UseFormSetValue<IMovieEditInput>) => {
 	const { push, query } = useRouter()

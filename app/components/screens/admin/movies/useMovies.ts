@@ -5,14 +5,14 @@ import { toastr } from 'react-redux-toastr'
 
 import { ITableItem } from '@/ui/admin-table/AdminTable/admin-table.interface'
 
+import { getAdminUrl } from '@/config/url.config'
+
 import { useDebounce } from '@/hooks/useDebounce'
 
 import { MovieService } from '@/services/movie.service'
 
 import { getGenreList } from '@/utils/movie/getGenreList'
 import { toastError } from '@/utils/toast-error'
-
-import { getAdminUrl } from '@/config/url.config'
 
 export const useMovies = () => {
 	const [searchTerm, setSearchTerm] = useState('')

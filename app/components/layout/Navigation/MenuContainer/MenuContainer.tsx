@@ -7,8 +7,6 @@ import {
 	userMenu
 } from '@/components/layout/Navigation/MenuContainer/menu.data'
 
-import styles from './Menu.module.scss'
-
 const MenuContainer: FC = () => {
 	return (
 		<div>

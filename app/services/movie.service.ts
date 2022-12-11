@@ -1,8 +1,8 @@
 import { IMovieEditInput } from '@/screens/admin/movie/movie-edit.interface'
 
-import { IMovie } from '@/shared/types/movie.types'
-
 import { getMoviesUrl } from '@/config/api.config'
+
+import { IMovie } from '@/shared/types/movie.types'
 
 import axios, { axiosClassic } from '../api/interceptors'
 

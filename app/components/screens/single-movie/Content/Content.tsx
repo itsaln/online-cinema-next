@@ -5,11 +5,11 @@ import FavoriteButton from '@/screens/single-movie/FavoriteButton/FavoriteButton
 
 import MaterialIcon from '@/ui/MaterialIcon'
 
+import { getActorUrl, getGenreUrl } from '@/config/url.config'
+
 import { useAuth } from '@/hooks/useAuth'
 
 import { IMovie } from '@/shared/types/movie.types'
-
-import { getActorUrl, getGenreUrl } from '@/config/url.config'
 
 import styles from './Content.module.scss'
 

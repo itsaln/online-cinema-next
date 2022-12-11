@@ -1,4 +1,5 @@
 import { INavItem } from '@/ui/admin-navigation/admin-navigation.interface'
+
 import { getAdminHomeUrl, getAdminUrl } from '@/config/url.config'
 
 export const navItems: INavItem[] = [

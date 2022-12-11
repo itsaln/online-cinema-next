@@ -4,11 +4,11 @@ import { FC } from 'react'
 
 import MaterialIcon from '@/ui/MaterialIcon'
 
+import { getMovieUrl } from '@/config/url.config'
+
 import { IMovie } from '@/shared/types/movie.types'
 
 import { getGenreListEach } from '@/utils/movie/getGenreList'
-
-import { getMovieUrl } from '@/config/url.config'
 
 import styles from './MovieList.module.scss'
 

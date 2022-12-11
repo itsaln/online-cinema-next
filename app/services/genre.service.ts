@@ -1,9 +1,9 @@
 import { IGenreEditInput } from '@/screens/admin/genre/genre-edit.interface'
 import { ICollection } from '@/screens/collections/collections.interface'
 
-import { IGenre } from '@/shared/types/movie.types'
-
 import { getGenresUrl } from '@/config/api.config'
+
+import { IGenre } from '@/shared/types/movie.types'
 
 import axios, { axiosClassic } from '../api/interceptors'
 

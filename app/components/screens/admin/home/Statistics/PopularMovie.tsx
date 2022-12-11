@@ -9,11 +9,11 @@ import styles from '@/screens/admin/home/Admin.module.scss'
 import SkeletonLoader from '@/ui/SkeletonLoader'
 import SubHeading from '@/ui/heading/SubHeading'
 
-import { IMovie } from '@/shared/types/movie.types'
+import { getMovieUrl } from '@/config/url.config'
 
 import { MovieService } from '@/services/movie.service'
 
-import { getMovieUrl } from '@/config/url.config'
+import { IMovie } from '@/shared/types/movie.types'
 
 const PopularMovie: FC = () => {
 	const { isLoading, data: movie } = useQuery(

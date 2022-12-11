@@ -29,6 +29,7 @@
     @apply relative z-1 w-full h-full flex items-end shadow-lg rounded-layout overflow-hidden;
 
     @include fade-bg-gradient(0deg);
+
     &::before {
       @apply z-2;
     }

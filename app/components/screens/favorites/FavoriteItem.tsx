@@ -4,11 +4,11 @@ import { FC } from 'react'
 
 import FavoriteButton from '@/screens/single-movie/FavoriteButton/FavoriteButton'
 
+import { getMovieUrl } from '@/config/url.config'
+
 import { useAuth } from '@/hooks/useAuth'
 
 import { IMovie } from '@/shared/types/movie.types'
-
-import { getMovieUrl } from '@/config/url.config'
 
 import styles from './Favorites.module.scss'
 

@@ -5,13 +5,13 @@ import { toastr } from 'react-redux-toastr'
 
 import { ITableItem } from '@/ui/admin-table/AdminTable/admin-table.interface'
 
+import { getAdminUrl } from '@/config/url.config'
+
 import { useDebounce } from '@/hooks/useDebounce'
 
 import { GenreService } from '@/services/genre.service'
 
 import { toastError } from '@/utils/toast-error'
-
-import { getAdminUrl } from '@/config/url.config'
 
 export const useGenres = () => {
 	const [searchTerm, setSearchTerm] = useState('')
@@ -64,7 +64,7 @@ export const useGenres = () => {
 			},
 			onSuccess: () => {
 				toastr.success('Delete genre', 'delete was successful')
-				queryData.refetch()
+				let ignore = queryData.refetch()
 			}
 		}
 	)

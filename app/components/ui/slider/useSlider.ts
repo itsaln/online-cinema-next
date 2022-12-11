@@ -17,5 +17,11 @@ export const useSlider = (length: number) => {
 		}, 300)
 	}
 
-	return { slideIn, index: currentIdx, isNext: isExistNext, isPrev: isExistPrev, handleClick: handleArrowClick }
+	return {
+		slideIn,
+		index: currentIdx,
+		isNext: isExistNext,
+		isPrev: isExistPrev,
+		handleClick: handleArrowClick
+	}
 }

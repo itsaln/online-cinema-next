@@ -9,6 +9,7 @@
     &:first-child {
       width: 35%;
     }
+
     &:last-child {
       @apply text-right justify-end;
     }

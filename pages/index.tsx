@@ -6,12 +6,12 @@ import { IHome } from '@/screens/home/home.interface'
 import { IGalleryItem } from '@/ui/gallery/gallery.interface'
 import { ISlide } from '@/ui/slider/slider.interface'
 
+import { getActorUrl, getMovieUrl } from '@/config/url.config'
+
 import { ActorService } from '@/services/actor.service'
 import { MovieService } from '@/services/movie.service'
 
 import { getGenreList } from '@/utils/movie/getGenreList'
-
-import { getActorUrl, getMovieUrl } from '../app/config/url.config'
 
 const HomePage: NextPage<IHome> = ({ slides, actors, trendingMovies }) => {
 	return (

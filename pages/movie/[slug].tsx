@@ -4,11 +4,11 @@ import SingleMovie from '@/screens/single-movie/SingleMovie'
 
 import { IGalleryItem } from '@/ui/gallery/gallery.interface'
 
-import { IMovie } from '@/shared/types/movie.types'
+import { getMovieUrl } from '@/config/url.config'
 
 import { MovieService } from '@/services/movie.service'
 
-import { getMovieUrl } from '../../app/config/url.config'
+import { IMovie } from '@/shared/types/movie.types'
 
 import Error404 from '../404'
 

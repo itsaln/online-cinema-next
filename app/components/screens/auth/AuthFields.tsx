@@ -44,7 +44,7 @@ const AuthFields: FC<IAuthFields> = ({
 				)}
 				placeholder='Password'
 				type='password'
-				error={errors.password as any} // need to solve
+				error={errors.password as any} // TODO: need to solve problems with any
 			/>
 		</>
 	)

@@ -1,5 +1,6 @@
-import { IAuthResponse, ITokens } from '@/store/user/user.interface'
 import Cookies from 'js-cookie'
+
+import { IAuthResponse, ITokens } from '@/store/user/user.interface'
 
 export const saveTokensStorage = (data: ITokens) => {
 	Cookies.set('accessToken', data.accessToken)

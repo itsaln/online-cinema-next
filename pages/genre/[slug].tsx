@@ -2,10 +2,10 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
 import Catalog from '@/ui/catalog-movies/Catalog'
 
-import { IGenre, IMovie } from '@/shared/types/movie.types'
-
 import { GenreService } from '@/services/genre.service'
 import { MovieService } from '@/services/movie.service'
+
+import { IGenre, IMovie } from '@/shared/types/movie.types'
 
 import Error404 from '../404'
 

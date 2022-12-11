@@ -4,14 +4,14 @@ import { toastr } from 'react-redux-toastr'
 
 import { ITableItem } from '@/ui/admin-table/AdminTable/admin-table.interface'
 
+import { getAdminUrl } from '@/config/url.config'
+
 import { useDebounce } from '@/hooks/useDebounce'
 
 import { UserService } from '@/services/user.service'
 
 import { convertMongoDate } from '@/utils/date/convertMongoDate'
 import { toastError } from '@/utils/toast-error'
-
-import { getAdminUrl } from '@/config/url.config'
 
 export const useUsers = () => {
 	const [searchTerm, setSearchTerm] = useState('')

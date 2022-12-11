@@ -1,13 +1,12 @@
 import { FC } from 'react'
+import { CSSTransition } from 'react-transition-group'
 
 import SlideArrow from '@/ui/slider/SlideArrow/SlideArrow'
+import SlideItem from '@/ui/slider/SlideItem'
 import { ISlide } from '@/ui/slider/slider.interface'
 import { useSlider } from '@/ui/slider/useSlider'
 
-import { CSSTransition } from 'react-transition-group'
-
 import styles from './Slider.module.scss'
-import SlideItem from '@/ui/slider/SlideItem'
 
 interface ISlider {
 	slides: ISlide[]
@@ -21,7 +20,12 @@ const Slider: FC<ISlider> = ({ slides, buttonTitle }) => {
 
 	return (
 		<div className={styles.slider}>
-			<CSSTransition in={slideIn} classNames='slide-animation' timeout={300} unmountOnExit>
+			<CSSTransition
+				in={slideIn}
+				classNames='slide-animation'
+				timeout={300}
+				unmountOnExit
+			>
 				<SlideItem slide={slides[index]} buttonTitle={buttonTitle} />
 			</CSSTransition>
 

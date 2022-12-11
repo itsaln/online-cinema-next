@@ -1,11 +1,11 @@
 import type { AppProps } from 'next/app'
 
+import MainProvider from '@/providers/MainProvider'
+
 import { TypeComponentAuthFields } from '@/shared/types/auth.types'
 
 import '@/assets/styles/globals.scss'
 import '@/assets/styles/react-select.scss'
-
-import MainProvider from '@/providers/MainProvider'
 
 type TypeAppProps = AppProps & TypeComponentAuthFields
 

@@ -5,9 +5,9 @@ import GalleryItem from '@/ui/gallery/GalleryItem'
 import Description from '@/ui/heading/Description'
 import Heading from '@/ui/heading/Heading'
 
-import Meta from '@/utils/meta/Meta'
-
 import { getMovieUrl } from '@/config/url.config'
+
+import Meta from '@/utils/meta/Meta'
 
 import styles from './Catalog.module.scss'
 

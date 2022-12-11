@@ -2,12 +2,12 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { FC, PropsWithChildren } from 'react'
 
+import { siteName, titleMerge } from '@/config/seo.config'
+
 import logoImage from '@/assets/images/logo.svg'
 
 import { ISeo } from '@/utils/meta/meta.interface'
 import { onlyText } from '@/utils/string/clearText'
-
-import { siteName, titleMerge } from '@/config/seo.config'
 
 const Meta: FC<PropsWithChildren<ISeo>> = ({
 	title,

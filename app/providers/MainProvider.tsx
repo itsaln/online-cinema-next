@@ -4,12 +4,13 @@ import { Provider } from 'react-redux'
 
 import Layout from '@/components/layout/Layout'
 
+import AuthProvider from '@/providers/AuthProvider/AuthProvider'
 import HeadProvider from '@/providers/HeadProvider/HeadProvider'
 import ReduxToast from '@/providers/ReduxToast'
 
-import { store } from '@/store/store'
-import AuthProvider from '@/providers/AuthProvider/AuthProvider'
 import { TypeComponentAuthFields } from '@/shared/types/auth.types'
+
+import { store } from '@/store/store'
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -19,17 +20,21 @@ const queryClient = new QueryClient({
 	}
 })
 
-const MainProvider: FC<PropsWithChildren<TypeComponentAuthFields>> = ({ children, Component }) => {
+const MainProvider: FC<PropsWithChildren<TypeComponentAuthFields>> = ({
+	children,
+	Component
+}) => {
 	return (
+		// TODO: need to resolve this
 		// <HeadProvider>
-			<Provider store={store}>
-				<QueryClientProvider client={queryClient}>
-					<ReduxToast />
-					<AuthProvider Component={Component}>
-						<Layout>{children}</Layout>
-					</AuthProvider>
-				</QueryClientProvider>
-			</Provider>
+		<Provider store={store}>
+			<QueryClientProvider client={queryClient}>
+				<ReduxToast />
+				<AuthProvider Component={Component}>
+					<Layout>{children}</Layout>
+				</AuthProvider>
+			</QueryClientProvider>
+		</Provider>
 		// </HeadProvider>
 	)
 }

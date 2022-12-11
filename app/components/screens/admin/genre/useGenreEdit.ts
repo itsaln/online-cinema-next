@@ -5,12 +5,12 @@ import { toastr } from 'react-redux-toastr'
 
 import { IGenreEditInput } from '@/screens/admin/genre/genre-edit.interface'
 
+import { getAdminUrl } from '@/config/url.config'
+
 import { GenreService } from '@/services/genre.service'
 
 import { getKeys } from '@/utils/object/getKeys'
 import { toastError } from '@/utils/toast-error'
-
-import { getAdminUrl } from '@/config/url.config'
 
 export const useGenreEdit = (setValue: UseFormSetValue<IGenreEditInput>) => {
 	const { push, query } = useRouter()

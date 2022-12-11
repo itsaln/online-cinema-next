@@ -5,11 +5,11 @@ import { toastr } from 'react-redux-toastr'
 
 import { IUserEditInput } from '@/screens/admin/user/user-edit.interface'
 
+import { getAdminUrl } from '@/config/url.config'
+
 import { UserService } from '@/services/user.service'
 
 import { toastError } from '@/utils/toast-error'
-
-import { getAdminUrl } from '@/config/url.config'
 
 export const useUserEdit = (setValue: UseFormSetValue<IUserEditInput>) => {
 	const { push, query } = useRouter()

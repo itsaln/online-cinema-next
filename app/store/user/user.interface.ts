@@ -7,7 +7,7 @@ export interface IUserState {
 
 export interface ITokens {
 	accessToken: string
-  refreshToken: string
+	refreshToken: string
 }
 
 export interface IInitialState {
@@ -17,7 +17,7 @@ export interface IInitialState {
 
 export interface IEmailPassword {
 	email: string
-  password: string
+	password: string
 }
 
 export interface IAuthResponse extends ITokens {
