@@ -3,6 +3,7 @@ const plugin = require('tailwindcss/plugin')
 
 const primary = '#E30B13'
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: [
 		'./pages/**/*.{js,ts,jsx,tsx}',
