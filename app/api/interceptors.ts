@@ -15,7 +15,7 @@ export const axiosClassic = axios.create({
 })
 
 export const instance = axios.create({
-	baseURL: API_SERVER_URL,
+	baseURL: API_URL,
 	headers: getContentType()
 })
 
