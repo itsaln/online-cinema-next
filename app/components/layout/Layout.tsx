@@ -1,3 +1,4 @@
+import cn from 'classnames'
 import { FC, PropsWithChildren } from 'react'
 
 import Navigation from '@/components/layout/Navigation/Navigation'
@@ -9,7 +10,7 @@ const Layout: FC<PropsWithChildren<unknown>> = ({ children }) => {
 	return (
 		<div className={styles.layout}>
 			<Navigation />
-			<div className={styles.center}>{children}</div>
+			<div className={cn(styles.center, 'custom-scroll')}>{children}</div>
 			<Sidebar />
 		</div>
 	)
