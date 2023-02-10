@@ -15,7 +15,7 @@ export const axiosClassic = axios.create({
 })
 
 export const instance = axios.create({
-	baseURL: IS_PRODUCTION ? API_SERVER_URL : API_URL,
+	baseURL: API_SERVER_URL,
 	headers: getContentType()
 })
 
