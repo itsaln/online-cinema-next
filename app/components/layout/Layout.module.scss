@@ -5,7 +5,8 @@ $bar-width: 19%;
 
   > div:first-child, > div:last-child {
     @apply border-gray-800 min-h-screen max-h-screen;
-    width: $bar-width;
+    min-width: $bar-width;
+    max-width: 380px;
   }
 
   > div:first-child {
