@@ -1,3 +1,4 @@
+import cn from 'classnames'
 import { FC } from 'react'
 
 import Logo from '@/components/layout/Navigation/Logo'
@@ -7,7 +8,7 @@ import styles from './Navigation.module.scss'
 
 const Navigation: FC = () => {
 	return (
-		<div className={styles.navigation}>
+		<div className={cn(styles.navigation, 'custom-scroll')}>
 			<Logo />
 			<MenuContainer />
 		</div>
