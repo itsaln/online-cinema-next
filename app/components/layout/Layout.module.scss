@@ -1,5 +1,5 @@
 .layout {
-  @apply flex flex-wrap;
+  @apply flex flex-nowrap;
 
   > div {
     &:first-child, &:last-child {
