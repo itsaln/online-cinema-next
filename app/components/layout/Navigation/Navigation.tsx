@@ -8,7 +8,7 @@ import styles from './Navigation.module.scss'
 
 const Navigation: FC = () => {
 	return (
-		<div className={cn(styles.navigation, 'custom-scroll')}>
+		<div className={cn(styles.navigation, 'hide-scroll')}>
 			<Logo />
 			<MenuContainer />
 		</div>

@@ -1,23 +1,13 @@
-$bar-width: 19%;
-
 .layout {
-  @apply flex flex-nowrap;
+  @apply flex flex-wrap;
 
-  > div:first-child, > div:last-child {
-    @apply border-gray-800 min-h-screen max-h-screen;
-    min-width: $bar-width;
-    max-width: 380px;
-  }
-
-  > div:first-child {
-    @apply border-r;
-  }
-
-  > div:last-child {
-    @apply border-l;
+  > div {
+    &:first-child, &:last-child {
+      @apply xl:min-w-[20%] xl:max-w-[20%] 2xl:min-w-[19%] 2xl:max-w-[19%] min-h-screen max-h-screen;
+    }
   }
 
   .center {
-    @apply grow min-h-screen max-h-screen p-layout;
+    @apply grow min-h-screen max-h-screen border-x border-gray-800 p-9 2xl:p-layout;
   }
 }

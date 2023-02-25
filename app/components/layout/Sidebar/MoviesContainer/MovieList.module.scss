@@ -1,13 +1,13 @@
 
 .list {
-  @apply mt-11 animate-fade;
+  @apply animate-fade mt-11;
 
   .heading {
-    @apply font-bold text-xl mb-5 text-white capitalize;
+    @apply font-bold text-lg 2xl:text-xl text-white capitalize mb-5;
   }
 
   .button {
-    @apply p-2.5 btn-primary block text-center;
+    @apply block btn-primary text-center p-2.5;
   }
 
   .item {
@@ -21,6 +21,8 @@
 
       &:hover {
         img {
+          // TODO: need to use tailwind color & remove that root:color
+          //@apply border-primary;
           border-color: var(--primary-color) !important;
         }
       }

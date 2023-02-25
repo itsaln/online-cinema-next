@@ -4,8 +4,16 @@
 
 @import '~react-redux-toastr/src/styles/index';
 
+:root {
+  --primary-color: #e30b13;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  @apply bg-gray-900 p-0 m-0;
+  @apply bg-gray-900 text-sm 2xl:text-base p-0 m-0;
   font-family: 'Outfit', sans-serif;
 }
 
@@ -14,16 +22,7 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-:root {
-  --primary-color: #e30b13;
-}
-
-input[type="file"],
-input[type="file"]::-webkit-file-upload-button {
+input[type="file"], input[type="file"]::-webkit-file-upload-button {
   @apply cursor-pointer focus:outline-none;
 }
 
@@ -38,7 +37,7 @@ input:focus {
 // Slide animation
 .slide-animation-enter {
   opacity: 0;
-  transform: scale(0.9);
+  transform: scale(.9);
 }
 .slide-animation-enter-active {
   opacity: 1;
@@ -50,7 +49,7 @@ input:focus {
 }
 .slide-animation-exit-active {
   opacity: 0;
-  transform: scale(0.9);
+  transform: scale(.9);
   transition: opacity 300ms, transform 300ms;
 }
 
@@ -58,7 +57,7 @@ input:focus {
   @apply overflow-y-auto;
 
   &::-webkit-scrollbar {
-    @apply w-0 h-0;
+    @apply w-1.5 h-1;
   }
   &::-webkit-scrollbar-thumb {
     @apply bg-primary bg-opacity-50;
@@ -75,13 +74,19 @@ input:focus {
   }
 }
 
+.hide-scroll {
+  @apply overflow-y-auto;
+
+  &::-webkit-scrollbar {
+    @apply w-0 h-0;
+  }
+}
+
 //@media (prefers-color-scheme: dark) {
-//  html {
-//    color-scheme: dark;
-//  }
 //
 //  body {
 //    color: white;
 //    background: black;
 //  }
+//
 //}

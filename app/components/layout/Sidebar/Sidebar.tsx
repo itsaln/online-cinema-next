@@ -1,14 +1,13 @@
 import cn from 'classnames'
 import { FC } from 'react'
 
-import MoviesContainer from '@/components/layout/Sidebar/MoviesContainer/MoviesContainer'
-import Search from '@/components/layout/Sidebar/Search/Search'
-
+import MoviesContainer from './MoviesContainer/MoviesContainer'
+import Search from './Search/Search'
 import styles from './Sidebar.module.scss'
 
 const Sidebar: FC = () => {
 	return (
-		<div className={cn(styles.sidebar, 'custom-scroll')}>
+		<div className={cn(styles.sidebar, 'hide-scroll')}>
 			<Search />
 			<MoviesContainer />
 		</div>

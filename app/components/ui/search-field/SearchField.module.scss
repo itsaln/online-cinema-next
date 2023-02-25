@@ -3,7 +3,7 @@
   @apply rounded-3xl border border-gray-700 px-3 py-2 flex items-center transition-colors;
 
   > svg {
-    @apply fill-gray-600 mr-2 text-3xl transition-colors;
+    @apply fill-gray-600 min-w-[22px] min-h-[22px] 2xl:min-w-[24px] 2xl:min-h-[24px] transition-colors mr-2;
   }
 
   > input {

@@ -17,7 +17,7 @@ const Home: FC<IHome> = ({ slides, actors, trendingMovies }) => {
 		>
 			<Heading
 				title='Watch movies online'
-				className='text-gray-300 mb-8 text-xl'
+				className='text-gray-300 mb-8 text-lg 2xl:text-xl'
 			/>
 
 			{slides.length ? (

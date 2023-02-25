@@ -13,11 +13,13 @@ const nextConfig = {
 		return [
 			{
 				source: '/api/:path*',
-				destination: 'https://online-cinema-api-3tf2.onrender.com/api/:path*'
+				destination: 'http://localhost:5000/api/:path*'
+				// destination: 'https://online-cinema-api-3tf2.onrender.com/api/:path*'
 			},
 			{
 				source: '/uploads/:path*',
-				destination: 'https://online-cinema-api-3tf2.onrender.com/uploads/:path*'
+				destination: 'http://localhost:5000/uploads/:path*'
+				// destination: 'https://online-cinema-api-3tf2.onrender.com/uploads/:path*'
 			}
 		]
 	}

@@ -6,7 +6,7 @@ import PopularMovies from '@/components/layout/Sidebar/MoviesContainer/PopularMo
 const DynamicFavoriteMovies = dynamic(
 	() =>
 		import(
-			'@/components/layout/Sidebar/MoviesContainer/FavoriteMovies/FavoriteMovies'
+			'./FavoriteMovies/FavoriteMovies'
 		),
 	{
 		ssr: false

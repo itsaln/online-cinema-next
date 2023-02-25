@@ -83,6 +83,35 @@ module.exports = {
 		require('@tailwindcss/aspect-ratio'),
 		plugin(({ addComponents, theme, addUtilities }) => {
 			addComponents({
+				'.truncate-1': {
+					display: '-webkit-box !important',
+					'-webkit-line-clamp': '1',
+					'-webkit-box-orient': 'vertical',
+					textOverflow: 'ellipsis',
+					overflow: 'hidden'
+				},
+				'.truncate-2': {
+					display: '-webkit-box !important',
+					'-webkit-line-clamp': '2',
+					'-webkit-box-orient': 'vertical',
+					textOverflow: 'ellipsis',
+					overflow: 'hidden'
+				},
+				'.truncate-3': {
+					display: '-webkit-box !important',
+					'-webkit-line-clamp': '3',
+					'-webkit-box-orient': 'vertical',
+					textOverflow: 'ellipsis',
+					overflow: 'hidden'
+				},
+				'.truncate-4': {
+					display: '-webkit-box !important',
+					'-webkit-line-clamp': '4',
+					'-webkit-box-orient': 'vertical',
+					textOverflow: 'ellipsis',
+					overflow: 'hidden'
+				},
+
 				'.btn-primary': {
 					backgroundColor: primary,
 					color: '#fff',

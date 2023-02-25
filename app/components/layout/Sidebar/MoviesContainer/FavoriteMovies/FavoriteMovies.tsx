@@ -1,13 +1,14 @@
 import { FC } from 'react'
 
-import NotAuthFavorites from '@/components/layout/Sidebar/MoviesContainer/FavoriteMovies/NotAuthFavorites'
-import MovieList from '@/components/layout/Sidebar/MoviesContainer/MovieList'
-
 import { useFavorites } from '@/screens/favorites/useFavorites'
 
 import SkeletonLoader from '@/ui/SkeletonLoader'
 
 import { useAuth } from '@/hooks/useAuth'
+
+import MovieList from '../MovieList'
+
+import NotAuthFavorites from './NotAuthFavorites'
 
 const FavoriteMovies: FC = () => {
 	const { favoritesMovies, isLoading } = useFavorites()

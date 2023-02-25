@@ -1,27 +1,27 @@
 
 .menu {
-  @apply mb-14 animate-fade;
+  @apply animate-fade mb-14;
 
   .heading {
-    @apply text-gray-500 uppercase text-sm font-semibold pl-layout;
+    @apply font-semibold text-xs 2xl:text-sm text-gray-500 uppercase pl-8 2xl:pl-layout;
   }
 
   .ul {
     > li {
-      @apply px-8 border-r-4 border-r-transparent transition-colors;
+      @apply border-r-4 border-r-transparent transition-colors px-6 2xl:px-8;
 
       > a {
-        @apply flex items-center text-gray-600 mt-6 cursor-pointer;
-
-        > span {
-          @apply ml-3 text-lg hover:text-white;
-        }
+        @apply flex items-center text-gray-600 cursor-pointer mt-6;
 
         > svg {
-          @apply text-2lg;
+          @apply min-w-[22px] min-h-[22px] 2xl:min-w-[24px] 2xl:min-h-[24px];
         }
 
-        > span, > svg {
+        > span {
+          @apply text-base 2xl:text-lg truncate-1 hover:text-white ml-2 2xl:ml-3;
+        }
+
+        > svg, > span {
           @apply transition-colors;
         }
       }
