@@ -1,5 +1,5 @@
 import cn from 'classnames'
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 
 import MaterialIcon from '@/ui/MaterialIcon'
 import AuthPlaceholder from '@/ui/video-player/AuthPlaceholder/AuthPlaceholder'
@@ -14,6 +14,10 @@ const VideoPlayer: FC<IVideoPlayer> = ({ slug, videoSource }) => {
 	const { actions, video, videoRef } = useVideo()
 	const { user } = useAuth()
 
+	useEffect(() => {
+		if (videoRef.current) videoRef.current.requestFullscreen()
+	}, [])
+
 	return (
 		<div
 			className={cn(styles.wrapper, {
@@ -27,6 +31,7 @@ const VideoPlayer: FC<IVideoPlayer> = ({ slug, videoSource }) => {
 						className={styles.video}
 						src={`${videoSource}#t=8`}
 						preload='metadata'
+						autoPlay
 					/>
 
 					<div className={styles.progressBarContainer}>
