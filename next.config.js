@@ -4,6 +4,11 @@ const nextConfig = {
 	swcMinify: true,
 	poweredByHeader: false,
 	optimizeFonts: false,
+	env: {
+		APP_ENV: process.env.APP_ENV,
+		APP_URL: process.env.APP_URL,
+		APP_SERVER_URL: process.env.APP_SERVER_URL
+	},
 	async rewrites() {
 		return [
 			{
